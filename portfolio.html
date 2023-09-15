@@ -12,12 +12,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style type="text/css">
-    
+    body {
+   background-image: url("./images/body-bg.jpeg");
+}
   </style>
 </head>
 
 
-<body>
+<body background="./images/desktop-wallpaper-retro-wave-abstract-cyberwave.jpg">
 
   <!--
     - #MAIN
@@ -40,7 +42,7 @@
         <div class="info-content">
           <h1 class="name" title="Agrim Sangotra">Agrim Sangotra</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Backend developer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -108,7 +110,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>INDUS HOSTEL NIT, Srinagar</address>
+              <address>National Institute of Technology, Srinagar</address>
             </div>
 
           </li>
@@ -121,19 +123,13 @@
 
           <li class="social-item">
             <a href="https://www.facebook.com" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon name="logo-Github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
             <a href="https://twitter.com" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon name="logo-Linkedin"></ion-icon>
             </a>
           </li>
 
@@ -171,7 +167,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <a href="#portfolio"><button class="navbar-link" data-nav-link>Portfolio</button></a>
           </li>
 
         </ul>
@@ -194,17 +190,35 @@
 
         <section class="about-text">
           <p>
-            I'm a student and UI/UX Designer from NIT, Srinagar, creating in the field of web development.
-            I enjoy
-            turning black & white cascades into simple, beautiful and intuitive designs.
+            <h4>Brief:</h4>
+            Hello, I'm Agrim Sangotra, a dedicated backend developer with a passion for crafting robust and efficient web APIs. 
+            With a strong foundation in programming languages such as C and C++, I bring a solid understanding of software architecture 
+            and problem-solving to every project I undertake.
           </p>
 
           <p>
-            My job is to build this portfolio website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to the product and make sure that it is eye-catching and easy to use. My aim is to bring
-            across my
-            message and identity in the most creative way.
+            <h4>Web:</h4>
+            My journey into web development has equipped me with essential web technologies like JavaScript, 
+            which enable me to create web APIs. I have hands-on experience with the Express.js framework, 
+            allowing me to build scalable and feature-rich backend systems.
+          </p>
+
+          <p>
+            <h4>DBMS:</h4>
+            Data management is at the core of my skill set, as I am proficient in both relational databases 
+            like MySQL and NoSQL databases like MongoDB. I understand the significance of data in today's digital 
+            world and ensure its integrity, security, and optimal performance.
+          </p>
+
+          <p>
+            <h4>Version-Control</h4>
+              I am well-versed in Git, which ensures collaborative and efficient code management.
+          </p>
+
+          <p>
+            <h4></h4>
+            Thank you for considering me as a candidate to work at your esteemed organisation. 
+            I look forward to the possibility of working together to create innovative and efficient web applications.
           </p>
         </section>
 
@@ -229,7 +243,9 @@
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    I am pursuing B Tech. in IT
+                    I am pursuing B Tech. in Information Technology at NIT, Srinagar.
+                    <br>
+                    Cgpa: 8.0
                   </p>
                 </div>
 
@@ -291,25 +307,36 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">KC INTERNATIONAL SCHOOL, Jammu</h4>
+              <h4 class="h4 timeline-item-title">NATIONAL INSTITUTE OF TECHNOLOGY, Srinagar, J&K, India</h4>
 
-              <span>2005 - 2019</span>
+              <span>2020-2024(expected)</span>
 
               <p class="timeline-text">
-                I've done my schooling from CBSE board.
-                Scored 10cgpa in 10th & 88% in 12th.      
+                B.Tech in Information Technology | CGPA: 8.0     
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">NATIONAL INSTITUTE OF TECHNOLOGY, Srinagar</h4>
+              <h4 class="h4 timeline-item-title">KC International School, Jammu, J&K,India</h4>
 
-              <span>2020 — 2024</span>
+              <span>2019</span>
 
               <p class="timeline-text">
-                Currently pursuing B Tech. in information technology.
+                CBSE (CLASS XII) | Percentage: 88%
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">KC International School, Jammu, J&K,India</h4>
+
+              <span>2017</span>
+
+              <p class="timeline-text">
+                CBSE (CLASS X) | CGPA: 10
               </p>
 
             </li>
@@ -332,19 +359,38 @@
 
 
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Learning Web Development</h4>
-
-              <span>2022 - Present</span>
-
+              <h4 class="h4 timeline-item-title">IIT Patna | Intern</h4>
+              <span>Dec 2022 - Feb 2023</span>
               <p class="timeline-text">
-                Currently creating and learning int the field of web.
+                • Worked on the Financial Complaints Detection project.
+                <br>
+                • Developed an innovative data collecIon method using YouTube's Data API and Python's PyTube library.
+                <br>
+                • Automated the process of collecting data for building the dataset, reducing manual effort and increasing
+                productivity.
+                <br>
+                • Utilised the YouTube Data API to access relevant video content and PyTube to extract and download
+                videos, ensuring a diverse and comprehensive dataset for training the complaint detection model.
+              </p>
+
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Freelance | Backend Development</h4>
+              <span>July 2023 - Current</span>
+              <p class="timeline-text">
+                • Working on developing the backend infrastructure for an Etsy seller's personal website.
+                <br>
+                • Checking API endpoints, payment gateways, authentication etc.
+                <br>
+                • Creating a database schema and setting up tables to store data from various APIs.
+                <br>
+                • (Note: Frontend for the website is still not complete, my task was to develop functional backend for an ecommerse website.)
               </p>
 
             </li>
 
 
-            <li class="timeline-item">
+            <!-- <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Hacktoberfest </h4>
 
@@ -354,7 +400,7 @@
                 Learned about open-source, git and github. Contributed in 6 open-source projects.
               </p>
 
-            </li>
+            </li> -->
 
           </ol>
 
@@ -362,60 +408,52 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title">Skills</h3>
 
           <ul class="skills-list content-card">
 
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web page design</h5>
-                <data value="80">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
+                <h5 class="h5">Programming Languages :</h5>
+                <data value="80"> C, C++</data>
               </div>
 
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">C/C++</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">Web Development :</h5>
+                <data value="70">HTML, CSS, JavaScript</data>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Latex</h5>
-                <data value="90">70%</data>
+                <h5 class="h5">Web Development Framework :</h5>
+                <data value="90">ExpressJs</data>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Graphic Design</h5>
-                <data value="50">50%</data>
+                <h5 class="h5">Database :</h5>
+                <data value="50">MySQL, MongoDb</data>
               </div>
+            </li>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Version Control :</h5>
+                <data value="50">Git</data>
               </div>
+            </li>
 
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Professional Application/Software :</h5>
+                <data value="50">Postman, Docker, Github</data>
+              </div>
             </li>
 
           </ul>
@@ -432,7 +470,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" id = "portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">MY PROJECTS</h2>
@@ -442,112 +480,116 @@
 
 
           <div class="filter-select-box">
-
             <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
             </button>
+          </div>
 
-            <ul class="select-list">
+          <div>
+            <h4 class="h2 article-title">APIs</h4>
+            <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/Agrim-Ani/Scriptable-widget-v01">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="Temp Converter" loading="lazy">
+                </figure>
+                <h3 class="project-title">Scriptable Widget Server Endpoints</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+            
+            <li class="project-item  active" data-filter-item data-category="web development">
+                <a href="https://github.com/Agrim-Ani/Meeting_room-Database">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="Temp Converter" loading="lazy">
+                </figure>
+                <h3 class="project-title">Meeting Rooms Backend</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="API">
+              <a href="https://github.com/Agrim-Ani/Contact_Manager-Backend">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="responsive webpage with navbar" loading="lazy">
+                </figure>
+                <h3 class="project-title">Contact Manager</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+              <li class="project-item  active" data-filter-item data-category="web development">
+                <a href="https://github.com/Agrim-Ani/CommunityBuilder">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="Temp Converter" loading="lazy">
+                </figure>
+                <h3 class="project-title">Community Builder</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="API">
+              <a href="https://github.com/Agrim-Ani/invoice_creater-Backend">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="grid" loading="lazy">
+                </figure>
+                <h3 class="project-title">Invoice Creator</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+            
+            <li class="project-item  active" data-filter-item data-category="API">
+              <a href="https://github.com/Agrim-Ani/Student_Info-Backend">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="stopwatch" loading="lazy">
+                </figure>
+                <h3 class="project-title">Student Info</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/Agrim-Ani/User_Authentication-Backend">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="Light to Dark Theme" loading="lazy">
+                </figure>
+                <h3 class="project-title">User Authentication Demonstration</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
 
-              <li class="select-item">
-                <button data-select-item>All</button>
+            <li class="project-item  active" data-filter-item data-category="web development">
+                <a href="https://github.com/Agrim-Ani/RESTful_API-Basic">
+                <figure class="project-img">
+                  <img src="./images/github.png" alt="Temp Converter" loading="lazy">
+                </figure>
+                <h3 class="project-title">Basic RESTful API</h3>
+                <p class="project-category">REST API</p>
+              </a>
+            </li>
+          </ul>
+          </div>
+
+          <div>
+            <h4 class="h2 article-title">Scriptable-Widgets</h4>
+            <ul class="project-list">
+
+              <li class="project-item  active" data-filter-item data-category="Scriptable">
+                <a href="https://github.com/Agrim-Ani/GithubTopRepos/tree/main">
+                <figure class="project-img">
+                  <img src="./images/scriptable.png" alt="Temp Converter" loading="lazy">
+                </figure>
+                <h3 class="project-title">Github Spotlight(Github Top 5 repos)</h3>
+                <p class="project-category">Scriptable IOS Widget</p>
+                </a>
               </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+              <li class="project-item  active" data-filter-item data-category="Scriptable">
+                <a href="https://github.com/Agrim-Ani/Task_Scheduler/tree/main">
+                <figure class="project-img">
+                  <img src="./images/scriptable.png" alt="Temp Converter" loading="lazy">
+                </figure>
+                <h3 class="project-title">Task Scheduler</h3>
+                <p class="project-category">Scriptable IOS Widget</p>
+                </a>
               </li>
 
             </ul>
-
           </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="./grid.html">
-
-                <figure class="project-img">
-                  <img src="./images/grid.png" alt="grid" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Grid.html</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="./portfolio.html">
-
-                <figure class="project-img">
-                  <img src="./images/responsive.png" alt="responsive webpage with navbar" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Responsive webpage with navbar</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="./stopwatch/stopwatch.html">
-
-                <figure class="project-img">
-                  <img src="./images/stopwatch.png" alt="stopwatch" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">stopwatch</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="./darkLightTheme/dark_light.html">
-
-                <figure class="project-img">
-                  <img src="./images/light-dark.png" alt="Light to Dark Theme" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Light to Dark Theme</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="./Temperature/temperature.html">
-
-                <figure class="project-img">
-                  <img src="./images/temp-conv.png" alt="Temp Converter" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Temperature Converter</h3>
-
-                <p class="project-category">Web development/p>
-
-              </a>
-            </li>
-
-          </ul>
 
         </section>
 

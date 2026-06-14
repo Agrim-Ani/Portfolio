@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens — refined dark "engineer" aesthetic
+--------------------------------------------------------------------------- */
+@theme {
+  --color-bg: hsl(240 6% 7%);
+  --color-surface: hsl(240 5% 11%);
+  --color-surface-2: hsl(240 5% 14%);
+  --color-border: hsl(240 4% 20%);
+  --color-muted: hsl(240 5% 65%);
+  --color-fg: hsl(0 0% 96%);
+  --color-accent: hsl(160 84% 45%);
+  --color-accent-soft: hsl(160 60% 22%);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, "SF Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: hsl(240 6% 7%);
+  }
+
+  /* Subtle grid backdrop */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(to right, hsl(240 4% 20% / 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(240 4% 20% / 0.25) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 64rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+  }
+
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.875rem;
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    background-color: var(--color-surface-2);
+  }
+}
+
+/* Entrance animation used by sections (progressively enhanced) */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: rise 0.6s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    animation: none;
+  }
+}

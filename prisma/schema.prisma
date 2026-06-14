@@ -1,0 +1,41 @@
+// Prisma schema for Agrim Sangotra's portfolio
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  category    String // e.g. "API", "Scriptable Widget", "npm package"
+  techStack   String[] // e.g. ["Node.js", "Express", "MongoDB"]
+  githubUrl   String?
+  liveUrl     String? // deployed application
+  demoUrl     String? // e.g. Swagger UI / live demo link
+  imageUrl    String?
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([order])
+  @@index([category])
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}

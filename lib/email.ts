@@ -17,11 +17,20 @@ export async function sendContactNotification(data: ContactInput): Promise<void>
   const to = process.env.CONTACT_TO_EMAIL ?? "agrimani.125@gmail.com";
   const from = process.env.CONTACT_FROM ?? "Portfolio <onboarding@resend.dev>";
 
-  await resend.emails.send({
+  // The Resend SDK returns { data, error } instead of throwing on API errors,
+  // so we must inspect `error` explicitly and surface it.
+  const { data: sent, error } = await resend.emails.send({
     from,
     to,
     replyTo: data.email,
     subject: `New portfolio message from ${data.name}`,
     text: `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`,
   });
+
+  if (error) {
+    console.error("[email] Resend returned an error:", error);
+    throw new Error(`Resend: ${error.message}`);
+  }
+
+  console.info("[email] sent notification:", sent?.id);
 }

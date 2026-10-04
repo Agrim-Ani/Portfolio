@@ -9,9 +9,9 @@
 
 export const profile = {
   name: "Agrim Sangotra",
-  title: "Backend Developer",
+  title: "Tech Lead, Backend Infrastructure",
   tagline:
-    "Backend developer @HCLTech building on Azure cloud services, working directly with Microsoft Dev Team.",
+    "Tech Lead @HCLTech building and owning backend infrastructure on Azure cloud, working directly with the Microsoft Dev Team.",
   email: "agrimsangotra30@gmail.com",
   phone: "+91 9469199281",
   location: "Noida, Uttar Pradesh, India",
@@ -24,7 +24,7 @@ export const profile = {
   },
 
   about: [
-    "I'm Agrim Sangotra, a backend developer at HCLTech working directly with the Microsoft's Network Watcher Traffic Analytics team. I build GenAI powered backend services including REST APIs that integrate custom Azure AI Foundry models to automate work that used to be manual.",
+    "I'm Agrim Sangotra, a Tech Lead at HCLTech working on backend infrastructure directly with Microsoft's Network Watcher Traffic Analytics team. I build GenAI powered backend services including REST APIs that integrate custom Azure AI Foundry models to automate work that used to be manual.",
     "My work also spans accross real-time deployment-health dashboards backed by Geneva/Kusto queries, release automation, and large scale infrastructure remediation across multiple Azure clouds and 60+ regions, consistently cutting manual effort and keeping releases healthy.",
     "I'm fluent across the backend stack — Node.js, Express, NestJS, TypeScript — with strong relational and NoSQL database experience (PostgreSQL, MongoDB, Cosmos DB) and a solid grounding in cloud, CI/CD, GenAI integration, and authentication (JWT, OAuth 2.0).",
   ],
@@ -39,7 +39,7 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Backend Developer",
+    role: "Tech Lead, Backend Infrastructure",
     company: "HCLTech · directly with the Microsoft team",
     period: "Sep 2024 – Present",
     points: [

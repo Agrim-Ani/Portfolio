@@ -2,9 +2,22 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// Projects migrated from the original static index.html.
-// Tech stacks are inferred (REST APIs are Node/Express); adjust freely in /admin.
+// Curated project set (exported from the admin-managed database).
+// Re-run with `npm run db:seed`; existing projects (matched by title) are skipped.
 const projects = [
+  {
+    title: "Broadcast",
+    description:
+      "Engineered a real time broadcasting server featuring user authentication, custom room creation and invitation systems to facilitate interactive group communication.",
+    category: "API",
+    techStack: ["Node.js", "Express", "MongoDB"],
+    githubUrl: "https://github.com/Agrim-Ani/Broadcasting-Server",
+    liveUrl: "https://broadcasting-server.onrender.com/",
+    demoUrl: "https://broadcasting-server.onrender.com/",
+    imageUrl: "/images/Project-Broadcast.png",
+    featured: true,
+    order: 1,
+  },
   {
     title: "Contact Manager",
     description:
@@ -13,16 +26,9 @@ const projects = [
     techStack: ["Node.js", "Express", "MongoDB", "Swagger"],
     githubUrl: "https://github.com/Agrim-Ani/Contact_Manager-Backend",
     demoUrl: "https://contact-manager-backend-z9l4.onrender.com/api-docs/",
+    imageUrl: "/images/swagger.png",
     featured: true,
     order: 1,
-  },
-  {
-    title: "Scriptable Widget Server Endpoints",
-    description: "Backend REST endpoints powering Scriptable iOS widgets.",
-    category: "API",
-    techStack: ["Node.js", "Express"],
-    githubUrl: "https://github.com/Agrim-Ani/Scriptable-widget-v01",
-    order: 2,
   },
   {
     title: "Meeting Rooms Backend",
@@ -30,6 +36,7 @@ const projects = [
     category: "API",
     techStack: ["Node.js", "Express", "MySQL"],
     githubUrl: "https://github.com/Agrim-Ani/Meeting_room-Database",
+    imageUrl: "/images/github.png",
     order: 3,
   },
   {
@@ -38,6 +45,7 @@ const projects = [
     category: "API",
     techStack: ["Node.js", "Express", "MongoDB"],
     githubUrl: "https://github.com/Agrim-Ani/CommunityBuilder",
+    imageUrl: "/images/github.png",
     order: 4,
   },
   {
@@ -46,6 +54,7 @@ const projects = [
     category: "API",
     techStack: ["Node.js", "Express"],
     githubUrl: "https://github.com/Agrim-Ani/invoice_creater-Backend",
+    imageUrl: "/images/github.png",
     order: 5,
   },
   {
@@ -54,6 +63,7 @@ const projects = [
     category: "API",
     techStack: ["Node.js", "Express"],
     githubUrl: "https://github.com/Agrim-Ani/Student_Info-Backend",
+    imageUrl: "/images/github.png",
     order: 6,
   },
   {
@@ -62,31 +72,8 @@ const projects = [
     category: "API",
     techStack: ["Node.js", "Express", "JWT"],
     githubUrl: "https://github.com/Agrim-Ani/User_Authentication-Backend",
+    imageUrl: "/images/github.png",
     order: 7,
-  },
-  {
-    title: "Basic RESTful API",
-    description: "A foundational RESTful API demonstrating core REST principles.",
-    category: "API",
-    techStack: ["Node.js", "Express"],
-    githubUrl: "https://github.com/Agrim-Ani/RESTful_API-Basic",
-    order: 8,
-  },
-  {
-    title: "GitHub Spotlight",
-    description: "A Scriptable iOS widget showing your top 5 GitHub repositories.",
-    category: "Scriptable Widget",
-    techStack: ["JavaScript", "Scriptable", "GitHub API"],
-    githubUrl: "https://github.com/Agrim-Ani/GithubTopRepos/tree/main",
-    order: 9,
-  },
-  {
-    title: "Task Scheduler",
-    description: "A Scriptable iOS widget for scheduling and tracking tasks.",
-    category: "Scriptable Widget",
-    techStack: ["JavaScript", "Scriptable"],
-    githubUrl: "https://github.com/Agrim-Ani/Task_Scheduler/tree/main",
-    order: 10,
   },
   {
     title: "npm-calculator",
@@ -94,6 +81,7 @@ const projects = [
     category: "npm package",
     techStack: ["JavaScript", "npm"],
     githubUrl: "https://github.com/Agrim-Ani/npm-calculator/tree/main",
+    imageUrl: "/images/npm.png",
     order: 11,
   },
 ];
@@ -101,7 +89,6 @@ const projects = [
 async function main() {
   console.log("Seeding projects…");
   for (const p of projects) {
-    // Idempotent-ish: skip if a project with the same title already exists.
     const existing = await prisma.project.findFirst({ where: { title: p.title } });
     if (existing) {
       console.log(`  • skip (exists): ${p.title}`);

@@ -136,9 +136,9 @@
   %----------HEADING-----------------
   \parbox{\dimexpr\linewidth-0.4cm\relax}{
     \begin{tabularx}{\linewidth}{L r}
-      \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\[1.5pt]
-      \course, \branch & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\[1.5pt]
-      \href{https://github.com/Agrim-Ani}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} & \href{https://www.linkedin.com/in/agrim-sangotra-203015210}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+      \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\[3pt]
+      \course, \branch & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\[3pt]
+      \href{https://portfolio-cd6hwyca7-agrim-anis-projects.vercel.app/}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ {Portfolio}} & \href{https://www.linkedin.com/in/agrim-sangotra-203015210}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
     \end{tabularx}
   }
 
@@ -170,25 +170,23 @@
 \cvsection{Experience}
 \vspace{10pt}
 \begin{itemize}[leftmargin=0pt, label={}]
-    \item \textbf{Backend Development | HCLTech (Microsoft Client)} \hfill \textit{Sep 2024 -- Present}
+    \item \textbf{Technical Lead - Backend Development | HCLTech (Microsoft Dev Team)} \hfill \textit{Sep 2024 -- Present}
   \vspace{1pt}
   \begin{itemize}[leftmargin=*]
+    \item Architected an end-to-end backend to track Microsoft release deployments across all global regions with integrated per-release storage, exposed as a custom MCP server enabling autonomous agents to monitor rollouts and surface per-region SLA delays and exception logs on completion, delivering real time, zero touch deployment visibility to release and customer teams (Node.js, Azure SQL, Managed Identity, Azure AI Foundry, Azure SRE Agent).
+    \item Mitigated high severity vulnerability events across 800+ customer Azure compute instances by automating guest patching via REST APIs and Azure Runbooks with Managed Identity auth, leaving zero user bearer token trace, hardening customer workloads with no manual intervention.
     \item Engineered backend services for an SFI resolution platform, with REST APIs integrating a custom Azure AI Foundry model to auto-summarize remediation tasks; automated SFI report-mail generation, cutting vendor reporting time by 90\%.
-    \item Built Geneva Kusto-backed APIs powering real-time deployment-health dashboards, cutting manual release verification by 70\%; backend services for release and Ev2 rollout tracking cut report time 90\% and tracking time 50\%.
     \item Owned 13 SFI security workstreams with 100\% on-time resolution, sustaining a $\sim$750 secure score and 4x perfect S360 scores.
-    \item Built 11+ Azure Runbook automations cutting manual touch operations by 70\% --- 150+ OS vulnerabilities, 150+ userConfig failures, 300+ untagged Public IPs remediated zero-touch.
-    \item Built 8 Ev2 scripts and 8 deployment automation pipeline enabling zero-touch runner infra creation, cutting tagged Public IP usage by 50\%.
-    \item Owned dataplane validation infra (MIVnet, Overlake VNet) across 3 Azure clouds, 60+ regions; expanded Managed Identity to 60+ regions for passwordless auth.
-    \item Tracked 100\% of service and HDInsight releases at 99\% success, with per-region health insights (SLA delays, exceptions, Service Fabric health) driving failure mitigation.
-    \item Executed automated script actions across 50+ HDInsight clusters, 2 clouds, and 17+ prod regions via Ev2 automation to meet customer deadline 50\% faster.
-    \item Enabled Azure Load Balancer health probing on VMSS instances; refactored Traffic Analytics auth to tenant-based scoped roles, tightening access governance.
-    \item Cut build package size by 10\% via RCA on build localization failures, eliminating recurring pipeline build failures.
+    \item Built 8 Ev2 scripts and 8 deployment automation pipelines enabling zero-touch runner infra creation, cutting tagged Public IP usage by 50\%.
+    \item Owned dataplane validation infra (MIVnet, Overlake VNet) across 3 Azure clouds and 60+ regions; expanded Managed Identity to 60+ regions for passwordless auth.
+    \item Built 11+ Azure Runbook automations cutting manual-touch operations by 70\% --- 150+ userConfig failures and 300+ untagged Public IPs remediated zero-touch.
+    \item Executed automated script actions across 50+ HDInsight clusters, 2 clouds, and 17+ prod regions via Ev2 automation to meet a customer deadline 50\% faster.
   \end{itemize}
   \vspace{8pt}
   \item \textbf{Backend Developer Intern | Mapsense} \hfill \textit{Feb 2024 -- Sep 2024}
   \vspace{1pt}
   \begin{itemize}[leftmargin=*]
-      \item Built 80\% of the backend for the Location Intelligence platform end-to-end, sustaining 99\% production uptime.
+      \item Built end to end of the backend for the Location Intelligence platform end-to-end, sustaining 99\% production uptime.
       \item Implemented OAuth 2.0 Google Sign-In, accelerating registration by 30\%; built profile APIs for invites, uploads, and geo-data workflows.
       \item Built location services (path retrieval, road snapping, session tracking), improving data precision by 40\%; helped secure the first enterprise client (The Nature Conservancy).
   \end{itemize}
